@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ProyectoFinal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/exb97526/Documents/Curso Python/Coderhouse/Proyecto_Final/ProyectoFinal/AppDisqueria/Templates'],
+        'DIRS': ['C:/Users/exb97526/Documents/Curso Python/Coderhouse/Proyecto_Final/ProyectoFinal/AppDisqueria/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
