@@ -15,4 +15,5 @@ http://127.0.0.1:8000/AppDisqueria/leerCliente
 http://127.0.0.1:8000/AppDisqueria/leerCd
 http://127.0.0.1:8000/AppDisqueria/leerVinilo
 
+En la pagina de inicio hay un buscador de clientes.
 
