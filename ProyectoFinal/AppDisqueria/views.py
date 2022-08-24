@@ -1,13 +1,3 @@
-import email
-from email.message import EmailMessage
-import mailbox
-from msilib.schema import CheckBox
-from pickletools import int4
-from sys import int_info
-from tabnanny import check
-from tokenize import Number
-from unicodedata import numeric
-from django.http.request import QueryDict
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
 from AppDisqueria.models import Vinilo, cd, Cliente
@@ -100,3 +90,19 @@ def leerClientes(request):
       contexto= {"clientes":clientes} 
 
       return render(request, "AppDisqueria/leerClientes.html",contexto)
+
+def buscarCliente(request):
+
+      if request.GET["nombre"]:
+
+            nombre = request.GET['nombre']
+
+            cliente = Cliente.objects.filter(nombre__icontains=nombre)
+
+            return render(request, "AppDisqueria/inicio.html", {"cliente":cliente})
+
+      else: 
+
+            respuesta = "No enviaste datos"
+
+      return HttpResponse(respuesta)

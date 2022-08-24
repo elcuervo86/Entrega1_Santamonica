@@ -2,11 +2,15 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Pagina de Inicio: Disqueria Santamonica</h1>
-    <p>VIVI TU MUSICA COMO QUIERAS!!</p>
+<h3>Buscar un cliente por nombre:</h3>
 
-    <h3>Vinilos y CDs a la venta.</h3>
+<form action="/AppDisqueria/buscarCliente" method="GET">
+
+<input type="string" name="nombre">
+
+<input type="submit" value="Buscar">
+
+</form>
 
 
 {% endblock %}
