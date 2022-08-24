@@ -2,15 +2,25 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-<h3>Buscar un cliente por nombre:</h3>
+    <h3>DISQUERIA SANTAMONICA</h3>
+    {% if cliente %}
 
-<form action="/AppDisqueria/buscarCliente" method="GET">
+    <h3>Busqueda clientes:</h3>
 
-<input type="string" name="nombre">
+    <ul>
+	{% for cliente in cliente %}
+        
+		<li> Nombre: {{cliente.nombre}} </li>
+		<li> Apellido: {{cliente.apellido}} </li>
+        <li> Telefono: {{cliente.telefono}} </li>
+        <li> Email: {{cliente.email}} </li>
+        <p><p>
 
-<input type="submit" value="Buscar">
+	{% endfor %}
 
-</form>
+    </ul>
+
+    {% endif %}
 
 
 {% endblock %}
