@@ -3,10 +3,30 @@
 {% block contenidoQueCambia %}
 
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Pagina de Vinilos</h1>
-    <p>VINILOS</p>
+    <h1>Formulario - Agregar Vinilo</h1>
+    
+    {% if miFormulario.errors %}
 
-    <h3>Listado de Vinilos</h3>
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+
+        <!-- Acá está la magia de Django-->
+        
+        <table>
+
+            {{ miFormulario.as_table }}
+
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
 
 
 {% endblock %}

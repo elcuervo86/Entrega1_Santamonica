@@ -12,8 +12,11 @@ urlpatterns = [
     path('vinilos', views.vinilos, name="Vinilos"),
     path('cds', views.cds, name="CDs"),
     path('clientes', views.clientes, name="Clientes"),
-    path('vinilosForm', views.vinilosForm, name="VinilosForm"),
-    path('cdsForm', views.cdsForm, name="CdsForm"),
-    path('clientesForm', views.clientesForm, name="ClientesForm")
+    path('leerCliente', views.leerClientes, name = "LeerClientes"),
+    #path('editarCliente/<Cliente _nombre>/', views.editarCliente, name="EditarCliente")
+    path('leerCd', views.leerCds, name = "LeerCds"),
+    #path('editarCliente/<Cliente _nombre>/', views.editarCliente, name="EditarCliente")
+    path('leerVinilo', views.leerVinilos, name = "LeerVinilos"),
+    #path('editarCliente/<Cliente _nombre>/', views.editarCliente, name="EditarCliente")
    
 ]
